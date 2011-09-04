@@ -13,7 +13,7 @@
     "parse"
     "query"
   ],
-  "main": "./lib/underscore.json",
+  "main": "./underscore.json",
   "engines": {
     "node": "*"
   },

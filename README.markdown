@@ -93,24 +93,35 @@ _.mixin({ json: _json});
 
 Here's how to use _json in the browser
 <pre><code>
-<script src="jquery.underscore.json.js"></script>
-</code></pre>
+&lt;script src="underscore.json.js"&gt;&lt;/script&gt;
+<script>
+// example 1
+// goodbye to square-bracketed nesting, hello to chaining
 
-You will find the minified source for a jquery plugin will be included from 0.0.2 onwards. This is what it pretty much does:
-<pre><code>
-(function($){
-    // definition of _json
-    var _json = .... // source
-   
-    // binding it as a plugin to $
-    $.fn._json = _json
-        return this;
-    }
-})(jQuery);
+var sample_json = {
+ ...
+};
+
+$('#city_label').html (
+  $._json(shortcode_directory_json).$(
+     $._json(sample_json).$('work employer pincode') 
+  )
+);
+
+// example 2
+// also useful within backbone.js
+myModels.Map = Backbone.Model.extend({
+    name:0,lat:0,long:0
+}); 
+
+new myViews.MapView( {
+    model: new myModels.Map( $._json(sample_json).$('home location') )
+});   
 </code></pre>
 
 Using with npm
 --------------
+Will be available from 0.0.3
 <pre><code>
 npm install underscore.json
 </code></pre>
