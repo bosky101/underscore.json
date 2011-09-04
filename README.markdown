@@ -5,7 +5,7 @@ Underscore.json is a json library written in javascript that can apply jQuery st
 NOTE: not production ready until 0.0.3 
 
 <pre><code>
-var _json = require("./lib/underscore.json");
+var _json = require("underscore.json");
 var result1 = _json(sample_json).$('work').$('employer').$toJSON().name;
 var result2 = _json(sample_json).$('work employer').$toJSON().name; 
 console.log('work employer name: '+ result2 , (result1 == result2 ) );
@@ -39,7 +39,7 @@ Working Example
 ---------------
 
 <pre><code>
-var _json = require("./lib/underscore.json"); // npm users use, require('underscore.json');
+var _json = require("underscore.json"); // minified version, see lib folder for un-minified version 
 var sys = require('sys');
 
 // querying the fb graph
