@@ -5,7 +5,7 @@ Underscore.json is a json library written in javascript that can apply jQuery st
 NOTE: not production ready until 0.0.3 
 
 <pre><code>
-var _json = require("./lib/underscore.json.js");
+var _json = require("./lib/underscore.json");
 var result1 = _json(sample_json).$('work').$('employer').$toJSON().name;
 var result2 = _json(sample_json).$('work employer').$toJSON().name; 
 console.log('work employer name: '+ result2 , (result1 == result2 ) );
@@ -107,4 +107,10 @@ You will find the minified source for a jquery plugin will be included from 0.0.
         return this;
     }
 })(jQuery);
+</code></pre>
+
+Using with npm
+--------------
+<pre><code>
+npm install underscore.json
 </code></pre>

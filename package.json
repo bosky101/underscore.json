@@ -1,7 +1,7 @@
 {
   "name": "underscore.json",
   "version": "0.0.2",
-  "description": "Underscore.json is a json library written in javascript that can apply jQuery style selectors to access JSON objects. It can be used on server-side environment such as nodejs, as well as the browser. What's more, just like $ in jQuery, underscore.json envourages self-referencing style chaining of calls.",
+  "description": "Underscore.json is a json library written in javascript that can apply jQuery style selectors to access JSON objects. It can be used on server-side environment such as nodejs, as well as the browser, and extends jquery if it finds it as well. What's more, just like $ in jQuery, underscore.json envourages self-referencing style chaining of calls.",
   "homepage": "https://github.com/bosky101/underscore.json",
   "author": "Bhasker Kode <bosky101@gmail.com> (http://about.me/kode)",
   "keywords": [
@@ -13,7 +13,7 @@
     "parse"
     "query"
   ],
-  "main": "./lib/underscore.date",
+  "main": "./lib/underscore.json",
   "engines": {
     "node": "*"
   },
