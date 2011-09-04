@@ -105,7 +105,7 @@ var sample_json = {
 $('#city_label').html (
   $._json(shortcode_directory_json).$(
      $._json(sample_json).$('work employer pincode') 
-  )
+  ).$toJSON().name
 );
 
 // example 2
