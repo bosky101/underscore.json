@@ -94,7 +94,7 @@ _.mixin({ json: _json});
 Here's how to use _json in the browser
 <pre><code>
 &lt;script src="underscore.json.js"&gt;&lt;/script&gt;
-<script>
+&lt;script&gt;
 // example 1
 // goodbye to square-bracketed nesting, hello to chaining
 
@@ -117,6 +117,7 @@ myModels.Map = Backbone.Model.extend({
 new myViews.MapView( {
     model: new myModels.Map( $._json(sample_json).$('home location') )
 });   
+&lt;/script&gt;
 </code></pre>
 
 Using with npm
