@@ -4,18 +4,19 @@ Underscore.json is a json library written in javascript that can apply jQuery st
 
 NOTE: not production ready until 0.0.3 
 
-<code>
+<pre><code>
 var _json = require("./lib/underscore.json.js");
 var result1 = _json(sample_json).$('work').$('employer').$toJSON().name;
 var result2 = _json(sample_json).$('work employer').$toJSON().name; 
 console.log('work employer name: '+ result2 , (result1 == result2 ) );
-</code>
+</code></pre>
 
 
 Much like jQuery, calling a selector rebuilds the instance, whereas setting it to a variable and then accessing will cache the instance and result of the selector.
 
 The API
 -------
+<pre><code>
 * $
   takes string as a selector, returns an instance of _json 
   eg: _json( {work: { location: {stree:' infinity' }}} ).$('work location street')
@@ -33,11 +34,11 @@ The API
 * $set
   can set the data or instance of _json
 
-</code>
+</code></pre>
 Working Example
 ---------------
 
-<code>
+<pre><code>
 var _json = require("./lib/underscore.json"); // npm users use, require('underscore.json');
 var sys = require('sys');
 
@@ -76,27 +77,27 @@ var json2 = {
 
 var result1 = _json(json2).$find('following name'); 
 console.log( 'following:\n' + sys.inspect(result1) ); 
-</code>
+</code></pre>
 
 Using Underscore.json with Underscore.js
 ----------------------------------------
 Underscore and jQuery have been a big inspiration in this project - two amazing projects.
 
 Here's how to use _json with underscore.js
-<code>
+<pre><code>
 var _json = require('underscore.json');
 _.mixin({ json: _json});
 // the symbol or shortcut you want instead, such as $
 // _.mixin({$:_json});
-</code>
+</code></pre>
 
 Here's how to use _json in the browser
-<code>
+<pre><code>
 <script src="jquery.underscore.json.js"></script>
-</code>
+</code></pre>
 
 You will find the minified source for a jquery plugin will be included from 0.0.2 onwards. This is what it pretty much does:
-<code>
+<pre><code>
 (function($){
     // definition of _json
     var _json = .... // source
@@ -106,4 +107,4 @@ You will find the minified source for a jquery plugin will be included from 0.0.
         return this;
     }
 })(jQuery);
-</code>
+</code></pre>
